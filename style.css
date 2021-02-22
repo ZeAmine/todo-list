@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: SF Pro Display, sans-serif;
+  background: var(--greyBG);
+  color: var(--black);
+}
+
+:root {
+  --whiteBloc: #ffffff;
+  --greyBG: #f5f7fa;
+  --lineGrey: #e5e7eb;
+  --black: #282121;
+  --greyS: #616161;
+  --blue: #2962ff;
+}
+
+h1 {
+  font-size: 3vw;
+  font-weight: 700;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 1200px;
+  min-width: 400px;
+}
+form input {
+  outline: none;
+  background-color: var(--whiteBloc);
+  display: block;
+  width: 500px;
+  height: 40px;
+  padding: 8px 10px;
+  font-family: SF Pro Display, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid var(--lineGrey);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+form input:focus {
+  border: 1px solid var(--blue);
+}
+form button {
+  outline: none;
+  background-color: transparent;
+  padding: 11px 13px;
+  font-family: SF Pro Display, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+form button:hover {
+  background-color: var(--blue);
+  color: var(--whiteBloc);
+}
+form button:active {
+  background-color: #2651c5;
+}
+/* ___________________________________________ */
+
+.liste-todo {
+  width: 34%;
+  margin: 40px auto 0;
+  max-width: 1200px;
+  min-width: 400px;
+}
+li {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--lineGrey);
+  color: var(--black);
+  margin: 15px 0;
+  padding: 8px 0;
+}
+li input {
+  outline: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+li span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+li button {
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+button ion-icon {
+  font-size: 22px;
+  color: var(--black);
+  pointer-events: none;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+button:hover ion-icon {
+  color: red;
+}
+
+/* anim rayure */
+li.finDeTache span {
+  text-decoration: 2px line-through;
+  opacity: 0.5;
+}
+li.finDeTache button ion-icon {
+  opacity: 0.5;
+}
